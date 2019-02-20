@@ -1,14 +1,19 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
 public class action2 implements ActionListener {
+
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
@@ -28,9 +33,20 @@ public class action2 implements ActionListener {
 		name.setForeground(Color.BLACK);
 		window.add(name);
 		
-		JTextField field = new JTextField(" ");
-		field.setBounds(250, 20, 300, 300);
-		window.add(field);
+		JLabel indexed = new JLabel("Number of files indexed : 0");
+		indexed.setOpaque(true);
+		indexed.setFont(new Font("Serif", Font.BOLD, 14));
+		indexed.setBounds(50, 180, 200, 20);
+		indexed.setForeground(Color.BLACK);
+		window.add(indexed);
+		
+		JList list = new JList();
+		list.setBounds(250, 20, 300, 300);
+		window.add(list);
+
+        //JTextField field = new JTextField();
+		//field.setBounds(250, 20, 300, 300);
+		//window.add(field);
 		
 		JButton b1 = new JButton("Adding"); 
 		b1.setBounds(60, 50, 100, 20);
