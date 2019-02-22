@@ -99,15 +99,11 @@ public Gui() {
 	rb2.setBounds(610, 80, 200, 30);
 	add(rb2);
 	
-	rb3 = new JRadioButton("Exact Phrase");
-	rb3.setBounds(610, 102, 200, 30);
-	add(rb3);
-	
-	
+
+	// Radio Group
 	bg1 = new ButtonGroup();
 	bg1.add(rb1);
 	bg1.add(rb2);
-	bg1.add(rb3);
 		
 }
 	
